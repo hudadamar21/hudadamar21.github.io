@@ -1,6 +1,3 @@
-const isDark = localStorage.isDark
-
-const particleColor = localStorage.isDark === 'true' ? "#ff0000" : "#ffffff"
 
 export default {
   show: true,
@@ -13,7 +10,7 @@ export default {
       }
     },
     color: {
-      value: particleColor
+      value: '#444444'
     },
     shape: {
       type: 'edge',

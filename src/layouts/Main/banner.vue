@@ -31,10 +31,6 @@ export default {
 
     const showParticles = computed(() => store.state.particlesOptions.show)
 
-    watch(particles_options.value, (newval) => {
-      particles_options.value = newval
-    })
-
     return {
       particles_options: particles_options.value,
       showParticles
@@ -45,6 +41,6 @@ export default {
 
 <style lang="postcss">
   #banner{ 
-    @apply min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-bl to-red-500 from-red-600 dark:to-black dark:from-gray-900
+    @apply min-h-screen w-full flex flex-col justify-center items-center bg-gray-900
   }
 </style>

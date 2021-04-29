@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {computed,onMounted, reactive,watch, watchEffect, ref} from 'vue';
+import {reactive, ref} from 'vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 
 import CardImage from '../../components/CardImage.vue';
@@ -70,7 +70,7 @@ export default {
 
 <style lang="postcss">
   #portfolio{
-    @apply min-h-screen w-full bg-gradient-to-br dark:from-gray-900 dark:to-black to-red-500 from-red-600
+    @apply min-h-screen w-full bg-gray-900
   }
   .portfolio-control{
     @apply hover:bg-red-600 hover:text-white focus:outline-none 

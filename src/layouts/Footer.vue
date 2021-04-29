@@ -18,6 +18,6 @@ export default {
 
 <style lang="postcss" >
   #footer{
-    @apply w-full h-24 bg-gradient-to-bl dark:from-gray-900 dark:to-black from-red-600 to-red-700
+    @apply w-full h-24 bg-gradient-to-bl from-gray-900 to-black
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="fixed top-0 right-0 p-5 z-20 md:w-full flex justify-end items-start md:items-center transition-colors duration-200"
+  <div class="fixed top-0 right-0 px-5 py-4 z-20 md:w-full flex justify-end items-start md:items-center transition-colors duration-200"
        :class="`${background} ${showMenu ? 'pl-16 md:pl-5' : ''}` ">
-    <ul class="md:flex flex-col md:flex-row justify-center items-center pr-5 md:pr-0 md:gap-5 md:shadow-none"
+    <ul class="md:flex flex-col md:flex-row justify-center items-center pr-8 md:pr-0 md:gap-5 md:shadow-none"
         :class="showMenu ? 'flex' : 'hidden'">
       <li class="menu-list">
         <a href="#banner">Home</a>
@@ -14,9 +14,6 @@
       </li>
       <li class="menu-list">
         <a href="#contact">Contact</a>
-      </li>
-      <li>
-        <button @click="setMode" class="focus:outline-none px-2 py-1 mt-2 md:mt-0 border base-border-color base-text-color base-hover-button transition duration-75">{{ isDark ? 'toLight' : 'toDark' }}</button>
       </li>
     </ul>
     <div class="menu-toggle flex md:hidden base-text-color base-bg-color" @click="setShowMenu">
@@ -46,7 +43,7 @@ export default {
       if(scrollTop.value == 0) {
         return 'bg-transparent'
       } else {
-        return showMenu.value ? 'bg-red-500 dark:bg-gray-900 shadow-md' : 'bg-transparent md:bg-red-500 md:dark:bg-gray-900'
+        return showMenu.value ? 'bg-gray-700 shadow-md' : 'bg-transparent md:bg-gray-800'
       }
     })
 
@@ -104,7 +101,7 @@ export default {
 <style lang="postcss">
   .menu-list{
     clip-path: polygon(4% 15%, 100% 0%, 96% 88%, 0% 100%);
-    @apply py-1 px-2 text-white dark:text-red-500 text-xl font-bold hover:bg-red-700 dark:hover:bg-red-500 dark:hover:text-black hover:text-white cursor-pointer transition duration-200
+    @apply py-1.5 px-3 text-gray-100 text-xl font-bold hover:bg-gray-700 cursor-pointer transition
   }
   .menu-toggle{
     @apply  w-8 h-8 justify-center items-center text-xl cursor-pointer

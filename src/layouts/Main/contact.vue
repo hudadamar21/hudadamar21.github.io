@@ -1,13 +1,13 @@
 <template>
   <section id="contact" class="w-full relative">
     <SectionTitle name="CONTACT"/>
-    <div class="center-object bg-red-600 dark:bg-red-700 w-32 w-full h-32 z-0 hidden md:block">
+    <div class="center-object bg-gray-900 w-32 w-full h-32 z-0 hidden md:block">
     </div>
     <div class="relative p-5 md:p-10 md:px-20 flex flex-col items-center justify-center md:flex-row">
       <!-- Social Media -->
       <div class="w-full md:w-1/2 py-5 px-5 md:px-0">
-       <div class="base-bg-color border base-border-color w-full md:w-1/2 h-full p-5 pt-8">
-         <h3 class="text-2xl font-semibold mb-5 base-text-color ">My Social Media</h3>
+       <div class="bg-gray-800 rounded w-full md:w-1/2 h-full p-5 pt-8">
+         <h3 class="text-2xl font-semibold mb-5 text-gray-100 ">My Social Media</h3>
           <ul class="flex flex-col gap-3">
             <li v-for="(sosmed, index) in socials" :key="index">
               <button >
@@ -21,22 +21,22 @@
        </div>
       </div>
       <!-- Contact me -->
-      <div class="w-full md:w-1/2 border base-border-color py-5 px-5  base-bg-color">
-        <h2 class="base-text-color text-2xl pb-3 font-semibold">Send the Message <strong class="base-text-color text-base ml-3"> * fitur ini belum berfungsi</strong></h2>
+      <div class="w-full md:w-1/2 py-5 px-5  bg-gray-800 rounded">
+        <h2 class="text-gray-100 text-2xl pb-3 font-semibold">Send the Message <strong class="text-gray-400 text-base ml-3"> * fitur ini belum berfungsi</strong></h2>
 
-        <div class="row100">
+        <div class="row100 ">
             <div class="col">
                 <div class="inputBox base-text-color">
                     <input type="text" name="" required class="base-input-text-color">
-                    <span class="text">Name</span>
-                    <span class="line base-input-bg-color"></span>
+                    <span class="text text-gray-100">Name</span>
+                    <span class="line bg-gray-700"></span>
                 </div>
             </div>
             <div class="col">
                 <div class="inputBox base-text-color">
                     <input type="text" name="" required class="base-input-text-color">
                     <span class="text">Email</span>
-                    <span class="line base-input-bg-color"></span>
+                    <span class="line bg-gray-700"></span>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 <div class="inputBox base-text-color textarea">
                     <textarea required class="base-input-text-color"></textarea>
                     <span class="text">Your Message..</span>
-                    <span class="line base-input-bg-color"></span>
+                    <span class="line bg-gray-700"></span>
                 </div>
             </div>
         </div>
@@ -79,6 +79,10 @@ export default {
 </script>
 
 <style lang="postcss">
+
+  .text {
+    @apply text-gray-100
+  }
   .center-object {
     position: absolute;
     margin-top: 10px;
@@ -87,10 +91,10 @@ export default {
     transform: translate(-50%, -50%);
   }
   .sosmed-link {
-    @apply flex items-center text-white dark:text-red-500 dark:hover:text-white hover:bg-red-700 dark:hover:bg-red-500 p-2 rounded
+    @apply flex items-center text-gray-100 hover:text-gray-100 hover:bg-gray-700 p-2 rounded
   }
   #contact{
-    @apply min-h-screen w-full bg-gradient-to-tr dark:from-black from-red-500 to-red-600 dark:to-gray-900
+    @apply min-h-screen w-full bg-gradient-to-tr from-black to-gray-900
   }
 
   #contact .row100 {

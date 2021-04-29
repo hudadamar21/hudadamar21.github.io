@@ -1,11 +1,11 @@
 <template>
-  <div ref="card" class="card group relative base-border-color base-bg-color overflow-hidden m-3" 
+  <div ref="card" class="card group relative base-bg-color overflow-hidden m-3" 
        @mouseenter="triggerAnimationHover"
        @mouseleave="triggerAnimationHover">
-    <span :ref="`span_${data.id}`" class="bg-red-600"></span>
+    <span :ref="`span_${data.id}`" class="bg-gray-700"></span>
     <div class="flex flex-col justify-center items-center relative">
       <img :src="data.image" class="object-cover w-full image-height">
-      <p class="text-xl absolute bottom-8 font-semibold base-border-color base-text-color bg-red-600 dark:bg-white px-3 py-1">{{data.title}}</p>
+      <p class="text-xl absolute bottom-8 font-semibold base-text-color bg-gray-700 dark:bg-white px-3 py-1">{{data.title}}</p>
     </div>
 
     <div class="absolute-center opacity-0 group-hover:opacity-100 z-10 transition duration-300 delay-400 w-full h-full px-5">
@@ -25,15 +25,13 @@
           </strong>
         </div>
         <div class="my-2 overflow-auto" v-html="data.detail.desc"></div>
-        <a :href="data.detail.link" target="_blank" class="base-button text-white hover:text-red-600 bg-red-600 hover:bg-white border border-1 border-white font-semibold">Open demo in new tab</a>
+        <a :href="data.detail.link" target="_blank" class="base-button text-white hover:text-gray-200 bg-gray-800 hover:bg-gray-900 font-semibold">Open demo in new tab</a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import VanillaTilt from 'vanilla-tilt';
-import {onMounted, ref, reactive} from 'vue';
 export default {
   props: {
     image: String,
@@ -47,8 +45,8 @@ export default {
 
       const span = this.$refs[`span_${this.data.id}`]
 
-      this.$refs[`span_${this.data.id}`].style.top =  e.offsetY+'px'
-      this.$refs[`span_${this.data.id}`].style.left =  e.offsetX+'px'
+      span.style.top =  e.offsetY+'px'
+      span.style.left =  e.offsetX+'px'
     }
   }
 }

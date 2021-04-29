@@ -111,7 +111,7 @@ export default {
 
 <style lang="postcss">
   #about{
-    @apply min-h-screen w-full bg-gradient-to-bl to-red-500 from-red-600 dark:to-black dark:from-gray-900
+    @apply min-h-screen w-full bg-gray-900
   }
   .fade-enter-active, .fade-leave-active {
     transition: opacity .3s;
