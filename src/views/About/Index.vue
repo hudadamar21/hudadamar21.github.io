@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import LayoutPage from '@/layouts/page.vue'
+import LayoutPage from '@/layouts/Page.vue'
 import RippleButton from '@/components/RippleButton.vue'
 
 import Skills from "./Skills.vue";
