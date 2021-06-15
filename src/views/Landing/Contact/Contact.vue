@@ -7,11 +7,13 @@
       <Sunset @opencontact="openContactMe" />
 
       <!-- Contact me -->
-      <div ref="contactMe" class="absolute transform translate-y-full h-screen w-screen inset-0 grid place-items-center transition-all duration-500">
-        <div class="backdrop w-2/3 min-h-4/5 bg-white bg-opacity-10 rounded-lg p-10 shadow-2xl">
-          <h1 class="text-3xl font-bold tracking-widest text-white mb-3">Contact Me</h1>
-          <div class="flex items-start gap-5">
-            <form @submit.prevent class="flex flex-col items-start gap-3 w-1/2 ">
+      <div ref="contactMe" class="absolute transform translate-y-full h-screen w-screen inset-0 grid place-items-center transition-all duration-500 overflow-auto z-50">
+        <div class="backdrop-filter backdrop-blur-md w-full md:w-2/3 min-h-4/5 bg-white bg-opacity-10 rounded-lg p-10 shadow-2xl">
+          <h1 class="text-3xl font-bold tracking-widest text-white mb-3">
+            Contact Me
+          </h1>
+          <div class="flex flex-col md:flex-row items-start gap-5">
+            <form @submit.prevent class="flex flex-col items-start gap-3 w-full md:w-1/2 ">
               <input type="text" placeholder="Fullname" class="contact-input text-shadow w-full">
               <input type="email" placeholder="Email" class="contact-input text-shadow w-full">
               <textarea 
@@ -20,7 +22,10 @@
                 placeholder="Your Message..."
                 class="contact-input text-shadow w-full resize-none"
               ></textarea>
-              <button class="contact-input tracking-widest shadow hover:bg-opacity-30">Send Message</button>
+              <button class="contact-input tracking-widest shadow hover:bg-opacity-30">
+                Send Message
+              </button>
+              <div class="block md:hidden w-full h-[0.2px] bg-white opacity-30"></div>
             </form>
             <SocialList />
           </div>
@@ -63,11 +68,8 @@ export default {
 </script>
 
 <style lang="postcss">
-.backdrop {
-  backdrop-filter: blur(10px);
-}
 .contact-input {
-  @apply px-4 py-2 rounded bg-white bg-opacity-20 placeholder-gray-200 text-white focus:border-transparent focus:outline-none focus:ring ring-white ring-opacity-10
+  @apply px-4 py-2 rounded bg-white bg-opacity-20 placeholder-white placeholder-opacity-50 text-white focus:border-transparent focus:outline-none focus:ring ring-white ring-opacity-10
 }
 .text-shadow {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);

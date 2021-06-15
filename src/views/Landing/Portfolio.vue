@@ -1,28 +1,33 @@
 <template>
-  <SectionLayout 
+  <LayoutSection 
     title="Portfolio"
-    :image="logo"
+    :image="image"
     @showmore="openPortfolioPage"
-    endSection
   >
   <template #desc>
-    <p class="text-base md:text-xl mt-2 mb-3 tracking-wider">Portfolio Website, Web Application, and Web Games</p>
+    <p class="text-base md:text-xl my-1 tracking-wider">Portfolio Website, Web Application, and Web Games</p>
   </template>
-  </SectionLayout>
+  </LayoutSection>
 </template>
 
 <script>
-import SectionLayout from '@/components/SectionLayout.vue';
-import logo from '@/assets/images/3d_logo.png'
-
 import { useRouter } from "vue-router";
+
+import image from "@/assets/images/portfolio_image.jpg";
+import LayoutSection from '@/layouts/Section.vue';
 
 export default {
   components: {
-    SectionLayout,
+    LayoutSection,
+  },
+  data(){
+    return {
+      image
+    }
   },
   setup(){
     const router = useRouter()
+
     const openPortfolioPage = () => {
       router.push({ name: 'portfolio' })
     }
@@ -31,11 +36,6 @@ export default {
       openPortfolioPage
     }
   },
-  data(){
-    return {
-      logo
-    }
-  }
 }
 </script>
 

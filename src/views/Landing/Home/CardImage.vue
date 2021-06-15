@@ -5,15 +5,15 @@
       <img :src="logo3d" class="object-cover object-center h-full grayscale-80" />
       <!-- social media -->
       <div class="social-media">
-        <FlyingLabelButton name="github" class="flying-button">
-          <SVGIcon icon="github" />
-        </FlyingLabelButton>
-        <FlyingLabelButton name="youtube" class="flying-button">
-          <SVGIcon icon="youtube" />
-        </FlyingLabelButton>
-        <FlyingLabelButton name="linkedin" class="flying-button">
-          <SVGIcon icon="linkedin" />
-        </FlyingLabelButton>
+        <template v-for="social of social_list" :key="social.name">
+          <FlyingLabelButton 
+            v-if="social.name !== 'Linkedin'"
+            :name="social.name" 
+            :url="social.url"
+          >
+            <div class="text-2xl" v-html="social.icon"></div>
+          </FlyingLabelButton>
+        </template>
       </div>
     </div>
   </div>
@@ -27,6 +27,7 @@ import FlyingLabelButton from '@/components/FlyingLabelButton.vue';
 import SVGIcon from '@/components/SVGIcon.vue';
 
 import logo from '@/assets/images/3d_logo.png'
+import social_list from "@/data/social_list";
 
 export default {
   components: {
@@ -64,7 +65,8 @@ export default {
 
     return {
       logo3d,
-      cardImage
+      cardImage,
+      social_list
     }
   }
 }
@@ -78,7 +80,7 @@ export default {
   @apply shadow-md rounded-xl flex justify-center overflow-hidden;
 }
 .social-media {
-  @apply absolute bottom-3 flex justify-center items-center gap-4 pb-2 w-full h-12;
+  @apply absolute bottom-3 flex justify-center items-center gap-4 pb-2 w-full h-14;
 }
 .grayscale-80 {
   filter: grayscale(80%);

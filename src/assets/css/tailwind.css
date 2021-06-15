@@ -6,3 +6,19 @@ html {
 }
 
 @tailwind utilities;
+
+@layer base {
+  button:focus {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+  .mandatory-y {
+    scroll-snap-type: y mandatory;
+  }
+}

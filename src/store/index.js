@@ -4,10 +4,18 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
+      category: 'Web Application',
+      tag: '',
       darkmode: false
     }
   },
   mutations: {
+    setCategory(state, value){
+      state.category =  value
+    },
+    setTag(state, value){
+      state.tag =  value
+    },
     setDarkmode(state, value) {
       window.localStorage.setItem('darkmode', value)
       state.darkmode = value

@@ -1,25 +1,26 @@
 <template>
-  <SectionLayout 
+  <LayoutSection 
     title="About Me"
     :image="image"
     @showmore="openAboutPage"
   >
   <template #desc>
-    <p class="text-base md:text-xl mt-2 mb-1 tracking-wider">Technologies and Programming is my Passion</p>
-    <p class="text-base md:text-xl mb-3 tracking-wider opacity-70">Search A New Somethings</p>
+    <p class="tracking-widest leading-relaxed">
+      Technologies and Programming is my Passion
+    </p>
   </template>
-  </SectionLayout>
+  </LayoutSection>
 </template>
 
 <script>
-import SectionLayout from '@/components/SectionLayout.vue'
-import image3d from "@/assets/images/3d_logo.png";
+import LayoutSection from '@/layouts/Section.vue'
+import image3d from "@/assets/images/about_image.jpg";
 
 import { ref } from 'vue';
 import { useRouter } from "vue-router";
 
 export default {
-  components: { SectionLayout },
+  components: { LayoutSection },
   setup(){
     const image = ref(image3d)
     const router = useRouter()
