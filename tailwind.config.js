@@ -16,6 +16,9 @@ module.exports = {
         gray: {
           850: '#171E28'
         }
+      },
+      animation: {
+      'spin-slow': 'spin 10s linear infinite',
       }
     },
   },

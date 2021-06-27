@@ -11,7 +11,7 @@
     <h1 class="title writing-vertical">{{ title }}</h1>
     <slot/>
     <footer class="py-7 mt-5 border-t border-gray-800 w-full text-center">
-      <p class="text-sm">hudadamar21&copy;2021</p>
+      <p class="text-sm tracking-widest">hudadamar21&copy;2021</p>
     </footer>
   </section>
 </template>

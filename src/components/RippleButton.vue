@@ -29,7 +29,7 @@ export default {
     backlight: String
   },
   setup(){
-    const shimmer = ref(null)
+    const shimmer = ref('')
 
     const onMouseMove = (e) => {
       shimmer.value.style.opacity = '1'

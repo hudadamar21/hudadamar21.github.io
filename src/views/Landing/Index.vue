@@ -1,26 +1,34 @@
 <template>
-  <div v-if="loaded" class="fixed inset-0 bg-black text-white grid place-items-center text-6xl">
-    <div class="planet bg-black w-52 h-52 rounded-full right z-20 grid place-items-center">
-    </div>
-    <div class="stars absolute w-full h-screen opacity-50 z-10"></div>
-  </div>
-  <section v-else id="landing-page" class="mandatory-y">
-    <Navbar/>
-    <Home />
-    <About />
-    <Quote quoteFrom="- motto">
-      <p class="text-4xl md:text-7xl font-bold text-gray-200 uppercase">Search a new somethings</p>
+  <section id="landing-page" class="mandatory-y">
+    <Navbar v-cloak/>
+    <Home v-cloak />
+    <About v-cloak />
+    <Quote quoteFrom="- motto" v-cloak>
+      <p class="text-4xl md:text-7xl font-bold text-white uppercase">Search a new somethings</p>
+      <div class="blackhole bg-black w-[5rem] md:w-[10rem] h-[5rem] md:h-[10rem] absolute -top-12 right-10 md:right-0 rounded-full z-[-20]"></div>
     </Quote>
-    <Portfolio />
-    <div class="relative">
-      <Quote quoteFrom="- lazy man">
-        <p class="text-4xl md:text-6xl font-bold text-gray-200 uppercase">
-          Do it quickly until it's finished, and then you can relax longer and more relaxed
-        </p>
+    <Portfolio v-cloak />
+    <div class="relative bg-gradient-to-b from-transparent to-gray-900" v-cloak>
+      <Quote class="relative z-10" quoteFrom="- lazy man">
+        <div class="w-max text-white">
+          <p class="text-4xl md:text-7xl font-black uppercase">
+            Do it quickly
+          </p>
+          <p class="text-4xl md:text-6xl font-bold uppercase">
+            until it's finished,
+          </p>
+          <p class="py-2 flex items-center text-2xl md:text-4xl text-gray-400 font-bold uppercase">
+            and then
+            <span class="flex-grow h-3 ml-3 bg-gray-400"></span>
+          </p>
+          <p class="text-3xl md:text-5xl font-bold uppercase">you can relax longer</p>
+          <p class="text-3xl md:text-5xl font-bold uppercase">and more relaxed</p>
+        </div>
       </Quote>
-      <div class="absolute bottom-0 left-0 h-36 w-full bg-gradient-to-b from-transparent to-gray-900"></div>
+      
+      
     </div>
-    <Contact/>
+    <Contact v-cloak/>
   </section>
 </template>
 
@@ -58,24 +66,25 @@ export default {
 }
 </script>
 
-<style scoped>
-  .planet {
-    animation: planet-rotate 5s linear infinite;
-  }
-  .stars {
-    background-image: url('@/assets/images/stars.png');
-    background-size: contain;
-    opacity: .4;
-    background-repeat: repeat;
-    animation: stars 10s linear infinite;
+<style lang="postcss" scoped>
+  .blackhole {
+    box-shadow: 0 0 80px 5px rgba(255, 255, 255, 0.411);
+    animation: blackhole 10s linear infinite alternate;
+    transform: translate( 0, 0);
   }
 
-  @keyframes stars {
+  @keyframes blackhole {
     0% {
-      background-position: 0 0;
+      box-shadow: 0 0 80px 5px rgba(255, 255, 255, 0.411);
+      transform: translate( 0, 0);
     }
     100% {
-      background-position: 2049px 0;
+      box-shadow: 0 0 150px 5px rgba(255, 255, 255, 0.411);
+      transform: translate( 15px, 15px);
     }
   }
+  [v-cloak] {
+    display: none;
+  }
+  
 </style>

@@ -1,7 +1,9 @@
 <template>
-  <div class="flex items-center">
-    <h1 class="writing-vertical text-xl md:mr-5 font-bold text-gray-600">TAGS</h1>
-    <ul class="flex flex-wrap my-5 gap-3">
+  <div class="flex flex-col lg:flex-row lg:items-center">
+    <h1 class="lg:writing-vertical pl-2 tracking-widest lg:pl-0 text-xl lg:mr-5 font-bold lg:text-gray-600">
+      TAGS
+    </h1>
+    <ul class="flex flex-wrap py-2 lg:my-5 gap-3">
       <RippleButton 
         v-for="tag of tags"
         :key="tag"
@@ -17,9 +19,11 @@
 </template>
 
 <script>
-import RippleButton from '@/components/RippleButton.vue'
 import { reactive } from 'vue'
-import { useStore } from 'vuex'
+import { setTag } from './portfolioStore'
+
+import RippleButton from '@/components/RippleButton.vue'
+
 export default {
   components: { RippleButton },
   setup(){
@@ -34,12 +38,6 @@ export default {
       'CSS',
       'Javascript',
     ])
-
-    const store = useStore()
-
-    const setTag = (tag) => {
-      store.commit('setTag', tag)
-    }
 
     return { tags, setTag }
   }

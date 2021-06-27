@@ -3,20 +3,20 @@
   <div class="absolute top-1/2 transform -translate-y-1/2 container-intro z-40">
     <!-- intro self -->
     <div class="lg:mb-4">
-      <h3 ref="hello" class="text-xl md:text-3xl font-bold opacity-0 text-gray-300 tracking-widest transition duration-1000">
+      <h1 ref="hello" class="text-xl md:text-3xl font-bold opacity-0 text-gray-300 tracking-widest transition duration-1000">
         HELLO<span class="inline md:hidden">, I AM</span>
-      </h3>
+      </h1>
       <div class="flex items-center gap-2">
-        <h3 class="hidden md:block writing-vertical text-gray-300 text-center tracking-wider text-xl font-bold">
+        <h3 ref="iam" class="hidden md:block opacity-0 writing-vertical text-gray-300 text-center tracking-wider text-xl font-bold transition duration-1000">
           I<span class="mt-2">AM</span>
         </h3>
         <h1 ref="say_name" class="say-name opacity-0 transition duration-1000">
           HUDA DAMAR
         </h1>
       </div>
-      <h3 ref="say_skills" class="say-skills opacity-0 my-2 text-gray-300 transition duration-1000 uppercase tracking-widest font-semibold">
+      <h1 ref="say_skills" class="say-skills opacity-0 my-2 text-gray-300 transition duration-1000 uppercase tracking-widest font-semibold">
          Front-end Web Developer
-      </h3>
+      </h1>
     </div>
 
     <!-- cv and cerificate -->
@@ -37,13 +37,15 @@ export default {
   },  
   setup(){
     const hello = ref('')
+    const iam = ref('')
     const say_name = ref('')
     const say_skills = ref('')
     const cv_certif = ref('')
     onMounted(() => {
       opacityOnTimeout(hello, 500)
-      opacityOnTimeout(say_name, 1000)
-      opacityOnTimeout(say_skills, 1500)
+      opacityOnTimeout(iam, 800)
+      opacityOnTimeout(say_name, 1200)
+      opacityOnTimeout(say_skills, 1700)
       opacityOnTimeout(cv_certif, 2000)
     })
 
@@ -55,6 +57,7 @@ export default {
 
     return {
       hello,
+      iam,
       say_name,
       say_skills,
       cv_certif

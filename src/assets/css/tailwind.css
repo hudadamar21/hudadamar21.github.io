@@ -18,7 +18,7 @@ html {
     writing-mode: vertical-rl;
     text-orientation: upright;
   }
-  .mandatory-y {
-    scroll-snap-type: y mandatory;
+  .snap-align-start {
+    scroll-snap-align: start;
   }
 }

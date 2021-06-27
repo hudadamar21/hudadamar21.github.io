@@ -18,6 +18,7 @@ import landing_page_apartment from '@/assets/images/portfolio/landing_page_apart
 import landing_page_ezio from '@/assets/images/portfolio/landing_page_ezio.png';
 import blog_post from '@/assets/images/portfolio/blog_post.png';
 import gold_money from '@/assets/images/portfolio/gold_money.png';
+import tweet_blog from '@/assets/images/portfolio/tweet_blog.png';
 
 
 const WebApplication = [
@@ -43,7 +44,7 @@ const WebApplication = [
   {
     title: 'Calculator',
     category: 'Web Application',
-    techs: ['Tailwindcss','Javascript'],
+    techs: ['Vuejs','Tailwindcss','Javascript'],
     image: calculator,
     desc: 'Webapp ini dibuat untuk menghitung selayaknya kalkulator pada umumnya.',
     demoUrl: 'https://hudadamar21.github.io/calculator',
@@ -89,6 +90,15 @@ const Website = [
     demoUrl: 'https://hudadamar21.github.io/smovies',
     repoUrl: 'https://github.com/hudadamar21/smovies'
   },
+  {
+    title: 'Landing Page Ezio',
+    category: 'Website',
+    techs: ['HTML','CSS','Javascript'],
+    image: landing_page_ezio,
+    desc: 'Landing page mengenai character Assassins Creed yaitu Ezio Auditore, web ini dibuat berdasarkan video dari Web Programming Unpas',
+    demoUrl: 'https://hudadamar21.github.io/landing-page-ezio',
+    repoUrl: 'https://github.com/hudadamar21/landing-page-ezio'
+  },
 ]
 
 const WebGames = [
@@ -127,7 +137,7 @@ const SlicingDesign = [
     category: 'Slicing Design',
     techs: ['Tailwindcss'],
     image: blog_post,
-    desc: 'Slicing website landing page, Design by Andre Rio',
+    desc: 'Slicing website blogging, Design by Andre Rio',
     demoUrl: 'https://hudadamar21.github.io/blog-post',
     repoUrl: 'https://github.com/hudadamar21/blog-post'
   },
@@ -139,6 +149,15 @@ const SlicingDesign = [
     desc: 'Slicing website landing page, Design by Andre Rio',
     demoUrl: 'https://hudadamar21.github.io/gold-money',
     repoUrl: 'https://github.com/hudadamar21/gold-money'
+  },
+  {
+    title: 'Tweet Blog',
+    category: 'Slicing Design',
+    techs: ['Vue','Tailwindcss'],
+    image: tweet_blog,
+    desc: 'Slicing website landing page, Design by Andre Rio',
+    demoUrl: 'https://tweet-blog21.netlify.app',
+    repoUrl: 'https://github.com/hudadamar21/tweet-blog'
   },
 ]
 

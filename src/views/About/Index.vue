@@ -1,22 +1,27 @@
 <template>
   <LayoutPage title="ABOUT">
     <div class="relative md:pt-16 md:p-20 md:pr-5">
-      <div class="flex justify-center items-center">
-        <img src="@/assets/images/profile.jpg" class="h-80 w-72 object-cover rounded bg-gray-700 mr-10" alt="">
-        <div class="w-[60%]">
-          <p class="text-lg mb-5">
+      <div class="flex flex-col md:flex-row justify-center items-center">
+        <img src="@/assets/images/profileimage.jpg" class="h-80 w-72 object-cover rounded bg-gray-700 md:mr-10 filter brightness-[75%] grayscale-[20%]" alt="profile image">
+        <div class="w-[90%] md:w-[60%] mt-10 md:mt-0 text-center md:text-left">
+          <p class="text-base md:text-lg mb-5 text-center md:text-left">
             Hello, Nama saya <strong>Nurhuda Damarmoyo</strong>.<br> Fresh graduate dari <strong>Universitas Bina Sarana Informatika, Bogor</strong>. <br>
             Saya adalah seorang yang teliti, suka belajar hal baru dan cepat memahami , dengan kelebihan ini saya mengasah kemampuan saya dalam bidang pemrogramman sebagai Frontend Web Developer.
           </p>
-          <RippleButton class="mr-3">Curicullum Vitae</RippleButton>
-          <RippleButton>Cerificate</RippleButton>
+          <div class="flex items-center justify-center md:justify-start flex-wrap gap-3">
+            <RippleButton>Cerificates</RippleButton>
+            <router-link to="/portfolio">
+              <RippleButton >Portfolios</RippleButton>
+            </router-link>
+            <RippleButton>Curicullum Vitae</RippleButton>
+          </div>
         </div>
       </div>
-      <div class="flex h-full px-20 mt-20">
-        <div class="w-1/2">
+      <div class="flex flex-col lg:flex-row h-full px-5 lg:px-20 mt-20">
+        <div class="w-[95%] lg:w-1/2">
           <Skills/>
         </div>
-        <div class="w-1/2">
+        <div class="w-[95%] lg:w-1/2 mt-10 lg:mt-0">
           <Experience/>
         </div>
       </div>

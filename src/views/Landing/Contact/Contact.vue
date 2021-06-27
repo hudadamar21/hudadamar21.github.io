@@ -1,6 +1,6 @@
 <template>
   <section class="min-h-screen w-full text-white bg-gradient-to-b from-gray-900 to-yellow-800">
-    <div class="h-screen p-32">
+    <div class="h-screen">
       
     </div>
     <div  id="Contact" class="h-screen relative bg-gradient-radial-b from-yellow-500 to-yellow-800 overflow-hidden">

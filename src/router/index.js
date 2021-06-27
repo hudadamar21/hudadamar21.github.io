@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Landing from "@/views/Landing/Index.vue";
 import About from "@/views/About/Index.vue";
 import Portfolio from "@/views/Portfolio/Index.vue";
+import AOS from "aos";
 
 const routes = [
   { 
@@ -25,6 +26,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior (to, from, savedPosition) {
+    
     return { top: 0 }
   }
 })

@@ -1,6 +1,9 @@
 {
-  "name": "porfolio-web-vite",
-  "version": "0.0.0",
+  "name": "web-portfolio-huda-damar",
+  "version": "1.0.0",
+  "description": "personal web portofolio",
+  "author": "Huda Damar",
+  "license": "ISC",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -21,5 +24,13 @@
     "postcss": "^8.2.10",
     "tailwindcss": "^2.1.1",
     "vite": "^2.1.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hudadamar21/hudadamar21.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hudadamar21/hudadamar21.github.io/issues"
+  },
+  "homepage": "https://github.com/hudadamar21/hudadamar21.github.io#readme"
 }

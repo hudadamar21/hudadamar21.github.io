@@ -1,29 +1,64 @@
 <template>
-  <section :id="title" class="relative h-screen w-full text-white overflow-hidden">
-    <!-- some design -->
-    <img src="@/assets/images/stars.png" class="absolute w-full h-screen opacity-40 z-10"/>
-    <!-- <img src="@/assets/images/stars.png" class="absolute w-full h-screen opacity-40"/> -->
+  <section
+    :id="title"
+    class="relative h-screen w-full text-white overflow-hidden"
+  >
+    <div v-if="topShading" class="absolute top-0 left-0 h-64 w-full bg-gradient-to-b from-black to-transparent"></div>
+    <!-- stars -->
+    <img
+      src="@/assets/images/stars.png"
+      class="absolute w-full h-screen opacity-30"
+      alt="stars"
+    />
+
     <div class="flex items-center h-screen px-5 md:px-20">
-      <div class="w-[75%] z-10" data-aos="fade-right">
-        <h1 class="block text-5xl md:text-[7rem] leading-none tracking-wider uppercase font-bold text-shadow">
+      <div class="w-[75%] z-10" data-aos="fade-right" data-aos-duration="500">
+
+        <!-- Title -->
+        <h1
+          class=" block text-5xl md:text-[7rem] leading-none tracking-wider uppercase font-bold text-shadow"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
           {{ title }}
         </h1>
-        <div class="shadow-solid px-4 md:px-6 py-2 md:py-4 rounded w-max max-w-full md:max-w-[75%] font-semibold text-sm md:text-lg bg-gradient-to-r from-gray-900 to-[#00000000] backdrop-filter backdrop-blur text-gray-100">
+
+        <!-- Description -->
+        <div
+          class="description shadow-solid"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
           <slot name="desc"></slot>
         </div>
-        <RippleButton class="mt-5" size="lg" @click="$emit('showmore')">
+
+        <RippleButton
+          class="mt-5"
+          size="lg"
+          @click="$emit('showmore')"
+          data-aos="fade-right"
+          data-aos-delay="300"
+        >
           Show more
         </RippleButton>
+
       </div>
-      <div class="absolute top-0 right-5 md:right-20 grid items-center justify-items-end w-full h-full" data-aos="fade-left">
-        <div class="w-[70%] md:w-3/5 h-[75%] shadow-2xl bg-gray-800 rounded-xl overflow-hidden">
-          <div class=" w-full h-full transition transform overflow-hidden">
-            <img :src="image" alt="image" class="object-cover w-full h-full grayscale-80">
-          </div>
+
+      <!-- image -->
+      <div
+        class=" absolute top-0 right-5 md:right-20 grid items-center justify-items-end w-full h-full"
+        data-aos="zoom-in-left"
+        data-aos-duration="500"
+      >
+        <div class=" w-[70%] md:w-3/5 h-[75%] shadow-2xl bg-gray-800 rounded-xl overflow-hidden">
+          <img
+            :src="image"
+            alt="image"
+            class="object-cover w-full h-full grayscale-80"
+          />
         </div>
       </div>
     </div>
-    
   </section>
 </template>
 
@@ -32,21 +67,25 @@ import RippleButton from "@/components/RippleButton.vue";
 
 export default {
   components: {
-    RippleButton
+    RippleButton,
   },
   props: {
     title: { type: String, required: true },
     image: { type: String, required: true },
-    endSection: { type: Boolean }
-  }
-}
+    endSection: { type: Boolean },
+    topShading: { type: Boolean }
+  },
+};
 </script>
 
 <style lang="postcss">
-  .text-shadow {
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
-  }
-  .shadow-solid {
-    box-shadow: 15px 10px 12px rgba(0, 0, 0, 0.6);
-  }
+.text-shadow {
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+}
+.shadow-solid {
+  box-shadow: 15px 10px 12px rgba(0, 0, 0, 0.6);
+}
+.description {
+  @apply px-4 md:px-6 py-2 md:py-4 rounded w-max max-w-full md:max-w-[75%] font-semibold text-sm md:text-lg bg-gradient-to-r from-gray-900 to-transparent backdrop-filter backdrop-blur text-gray-100;
+}
 </style>

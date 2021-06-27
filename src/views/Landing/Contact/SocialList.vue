@@ -5,7 +5,7 @@
       :key="social.name" 
       class="flex items-center gap-2 text-white px-3 py-2 transition-none hover:bg-white hover:bg-opacity-20 rounded cursor-pointer">
         <div v-html="social.icon"></div>
-        <a :href="social.url" target="_blank">{{ social.name }}</a>
+        <a :href="social.url" target="_blank" rel="noreferrer">{{ social.name }}</a>
     </div>
     <div class="absolute top-full right-0 w-2/3 h-700px bg-white bg-opacity-10 transform -translate-y-1/2 rotate-45"></div>
   </div>

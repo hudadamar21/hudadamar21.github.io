@@ -8,56 +8,8 @@
   <!-- beach siluet -->
   <div ref="beach" class="absolute bottom-0 left-0 h-24 w-full bg-black flex transition">
 
-    <!-- grass -->
-    <div class="flex items-end absolute bottom-full left-0 overflow-hidden">
-      <img 
-        v-for="grass in 10" 
-        :key="grass" 
-        src="@/assets/images/grass.webp" 
-        class="pt-10 w-[280px]" 
-        alt="grass"
-      >
-
-      <div class="absolute bottom-0 left-0 flex items-end justify-between w-full">
-        <div class="flex items-end">
-          <img 
-            v-for="grass2 in 3" 
-            :key="grass2" 
-            src="@/assets/images/grass2.webp" 
-            width="90"
-            :class="{'rotate-x-full' : grass2 % 2 === 0}"
-            alt="grass2"
-          >
-        </div>
-        <div class="flex items-end justify-between w-1/2">
-          <img 
-            v-for="grass2 in 5" 
-            :key="grass2" 
-            src="@/assets/images/grass2.webp" 
-            width="90"
-            :class="{'rotate-x-full' : grass2 % 2 === 0}"
-            alt="grass2"
-          >
-        </div>
-        <div class="flex items-end">
-          <img 
-            v-for="grass2 in 3" 
-            :key="grass2" 
-            src="@/assets/images/grass2.webp" 
-            width="90"
-            :class="{'rotate-x-full' : grass2 % 2 === 0}"
-            alt="grass2"
-          >
-        </div>
-      </div>
-    </div>
-
-    <div class="absolute -left-24 bottom-full">
-      <img src="@/assets/images/palm.webp" class="w-56 md:w-96" alt="palm">
-    </div>
-
-    <div class="absolute -right-24 bottom-full rotate-x-full">
-      <img src="@/assets/images/palm.webp" class="w-56 md:w-96" alt="palm">
+    <div class="absolute w-screen bottom-[95%] rotate-x-full">
+      <img src="@/assets/images/terrain.png" class="w-full h-full" alt="palm">
     </div>
 
     <div class="text-yellow-600 h-full flex flex-col justify-center pl-3 md:pl-10">
@@ -66,7 +18,7 @@
     </div>
 
     <!-- message -->
-    <div @click="$emit('opencontact')" class="absolute bottom-12 right-20 w-12 md:w-14 h-6 md:h-8 cursor-pointer text-yellow-600 hover:text-yellow-500 animate-bounce">
+    <div @click="$emit('opencontact')" class="absolute bottom-12 right-10 md:right-20 w-12 md:w-14 h-6 md:h-8 cursor-pointer text-yellow-600 hover:text-yellow-500 animate-bounce">
       <svg viewBox="0 0 202.839 202.839" fill="currentColor">
         <path d="M185.502,31.815H17.336C7.776,31.815,0,39.592,0,49.152v104.536c0,9.56,7.776,17.336,17.336,17.336h168.166
         c9.56,0,17.337-7.777,17.337-17.336V49.152C202.839,39.592,195.062,31.815,185.502,31.815z M186.759,147.492
@@ -77,8 +29,7 @@
         c2.23-1.628,5.358-1.14,6.986,1.091c1.629,2.23,1.141,5.358-1.09,6.986l-62.942,45.943L186.759,147.492z"/>
       </svg>
     </div>
-
-    
+   
   </div>
 </template>
 

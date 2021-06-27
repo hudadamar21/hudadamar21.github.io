@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-8 flex items-center tracking-tighter">
-    <h1 class="writing-vertical text-xl md:mr-5 font-bold text-gray-600">
+  <div class="mb-8 flex flex-col lg:flex-row lg:items-center lg:tracking-tighter">
+    <h1 class="lg:writing-vertical pl-2 tracking-widest lg:pl-0 text-xl lg:mr-5 font-bold lg:text-gray-600">
       CATEGORIES
     </h1>
     <ul class="category">
@@ -9,13 +9,9 @@
         v-for="(category, i) of categories" 
         :key="category">
           <li 
-            :class="{
-              'category-list' : true, 
-              'border-none' : i === categories.length - 1
-            }"
-            @click="setCategory(category)"
-          >
-            {{ category }}
+            :class="['category-list', i === categories.length - 1 ? 'border-none' : false]"
+            @click="setCategory(category)" >
+              {{ category }}
           </li>
       </template>
     </ul>
@@ -24,10 +20,9 @@
 
 <script>
 import { reactive } from 'vue'
-import { useStore } from 'vuex'
+import { setCategory } from "./portfolioStore";
 export default {
   setup(){
-    const store = useStore()
 
     const categories = reactive([
       'Website',
@@ -35,10 +30,6 @@ export default {
       'Web Games',
       'Slicing Design'
     ])
-
-    const setCategory = (category) => {
-      store.commit('setCategory', category)
-    }
 
     return {
       categories,
@@ -50,7 +41,7 @@ export default {
 
 <style lang="postcss">
   .category {
-    @apply flex flex-col my-5 w-full bg-gradient-to-br from-gray-700 to-gray-900 rounded-sm
+    @apply flex flex-col my-2 lg:my-5 w-full bg-gradient-to-br from-gray-700 to-gray-900 rounded-sm
   }
   .category-list {
     @apply px-5 py-4 text-lg hover:bg-gray-800 cursor-pointer border-b border-gray-700 transition
