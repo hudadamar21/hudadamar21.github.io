@@ -32,7 +32,7 @@
 <script>
 import LayoutPage from '@/layouts/Page.vue'
 import RippleButton from '@/components/RippleButton.vue'
-import profile_image from "@/assets/images/profileimage.jpg";
+import profile_image from "@/assets/images/profile.jpg";
 
 import Skills from "./Skills.vue";
 import Experience from "./Experience.vue";
