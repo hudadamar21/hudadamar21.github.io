@@ -2,7 +2,7 @@
   <LayoutPage title="ABOUT">
     <div class="relative md:pt-16 md:p-20 md:pr-5">
       <div class="flex flex-col md:flex-row justify-center items-center">
-        <img src="@/assets/images/profileimage.jpg" class="h-80 w-72 object-cover rounded bg-gray-700 md:mr-10 filter brightness-[75%] grayscale-[20%]" alt="profile image">
+        <img :src="profile_image" class="h-80 w-72 object-cover rounded bg-gray-700 md:mr-10 filter brightness-[80%] grayscale-[10%]" alt="profile image">
         <div class="w-[90%] md:w-[60%] mt-10 md:mt-0 text-center md:text-left">
           <p class="text-base md:text-lg mb-5 text-center md:text-left">
             Hello, Nama saya <strong>Nurhuda Damarmoyo</strong>.<br> Fresh graduate dari <strong>Universitas Bina Sarana Informatika, Bogor</strong>. <br>
@@ -32,6 +32,7 @@
 <script>
 import LayoutPage from '@/layouts/Page.vue'
 import RippleButton from '@/components/RippleButton.vue'
+import profile_image from "@/assets/images/profileimage.jpg";
 
 import Skills from "./Skills.vue";
 import Experience from "./Experience.vue";
@@ -43,6 +44,11 @@ export default {
     Skills,
     Experience
   },
+  setup(){
+    return {
+      profile_image
+    }
+  }
 }
 </script>
 
