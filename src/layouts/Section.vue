@@ -9,6 +9,8 @@
       src="@/assets/images/stars.png"
       class="absolute w-full h-screen opacity-30"
       alt="stars"
+      width="1000"
+      height="700"
     />
 
     <div class="flex items-center h-screen px-5 md:px-20">

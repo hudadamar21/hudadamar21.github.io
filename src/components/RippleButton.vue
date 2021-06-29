@@ -1,5 +1,6 @@
 <template>
   <button
+    name="ripple-button"
     @mousemove.self.stop="onMouseMove"
     @mouseleave.self="onMouseLeave"
     class="ripple-button"

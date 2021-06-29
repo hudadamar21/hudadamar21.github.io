@@ -7,9 +7,9 @@
         HELLO<span class="inline md:hidden">, I AM</span>
       </h1>
       <div class="flex items-center gap-2">
-        <h3 ref="iam" class="hidden md:block opacity-0 writing-vertical text-gray-300 text-center tracking-wider text-xl font-bold transition duration-1000">
+        <h1 ref="iam" class="hidden md:block opacity-0 writing-vertical text-gray-300 text-center tracking-wider text-xl font-bold transition duration-1000">
           I<span class="mt-2">AM</span>
-        </h3>
+        </h1>
         <h1 ref="say_name" class="say-name opacity-0 transition duration-1000">
           HUDA DAMAR
         </h1>

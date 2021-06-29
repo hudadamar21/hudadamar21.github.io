@@ -2,16 +2,16 @@
   <nav class="fixed top-0 left-0 w-full h-12 md:h-16 text-white z-50 transition duration-300 no-backdrop flex items-center justify-center md:justify-end md:pr-32 gap-10 w-full h-full" :class="navbg">
     <ul class="relative flex items-center gap-10 ">
       <li ref="marker" id="marker"></li>
-      <a 
-        v-for="list of navlist" 
-        @click.self="onIndicatorMove($event)" 
-        :key="list" 
-        :href="`#${list}`"
-        class="relative group text-base md:text-lg cursor-pointer"
-        :class="listHover"
-      >
-        {{ list }}
-      </a>
+      <li v-for="list of navlist" :key="list" >
+        <a 
+          @click.self="onIndicatorMove($event)" 
+          :href="`#${list}`"
+          class="relative group text-base md:text-lg cursor-pointer"
+          :class="listHover"
+        >
+          {{ list }}
+        </a>
+      </li>
     </ul>
   </nav>
 </template>

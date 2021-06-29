@@ -22,14 +22,14 @@
                 placeholder="Your Message..."
                 class="contact-input text-shadow w-full resize-none"
               ></textarea>
-              <button class="contact-input tracking-widest shadow hover:bg-opacity-30">
+              <button name="send-message" class="contact-input tracking-widest shadow hover:bg-opacity-30">
                 Send Message
               </button>
               <div class="block md:hidden w-full h-[0.2px] bg-white opacity-30"></div>
             </form>
             <SocialList />
           </div>
-          <button @click="closeContactMe" class="absolute top-3 right-3 bg-white bg-opacity-20 rounded w-8 h-8 hover:bg-opacity-30 focus:outline-none focus:ring ring-white ring-opacity-20 text-white font-bold text-xl">
+          <button title="close contact me" @click="closeContactMe" class="absolute top-3 right-3 bg-white bg-opacity-20 rounded w-8 h-8 hover:bg-opacity-30 focus:outline-none focus:ring ring-white ring-opacity-20 text-white font-bold text-xl">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
         </div>
