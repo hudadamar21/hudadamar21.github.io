@@ -25,7 +25,7 @@ export default {
     const marker = ref('')
     const navlist = ref([
       'Home',
-      'About Me',
+      'About',
       'Portfolio',
       'Contact'
     ])

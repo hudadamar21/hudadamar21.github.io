@@ -1,6 +1,7 @@
 <template>
   <LayoutSection 
     title="About Me"
+    id="About"
     :image="image"
     @showmore="openAboutPage"
     topShading
@@ -28,9 +29,15 @@ export default {
     const openAboutPage = () => {
       router.push({ name: 'about' })
     }
+
+    const onIntersectionElement = (value) => {
+      console.log('about interaction', value)
+    }
+
     return {
       image,
-      openAboutPage
+      openAboutPage,
+      onIntersectionElement
     }
   }
 }

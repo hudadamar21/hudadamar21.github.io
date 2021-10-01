@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Landing from "@/views/Landing/Index.vue";
 import About from "@/views/About/Index.vue";
 import Portfolio from "@/views/Portfolio/Index.vue";
-import AOS from "aos";
+import Certificate from "@/views/Certificate/index.vue";
 
 const routes = [
   { 
@@ -19,6 +19,11 @@ const routes = [
     path: '/portfolio',
     name: 'portfolio',
     component: Portfolio 
+  },
+  { 
+    path: '/certificate',
+    name: 'certificate',
+    component: Certificate 
   },
 ]
 

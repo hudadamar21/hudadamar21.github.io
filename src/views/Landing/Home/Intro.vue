@@ -22,7 +22,9 @@
     <!-- cv and cerificate -->
     <div ref="cv_certif" class="opacity-0 w-full flex items-center gap-3 transition duration-1000">
       <RippleButton>Curicullum Vitae</RippleButton>
-      <RippleButton>Cerificate</RippleButton>
+      <RippleButton>
+        <router-link to="/certificate">Cerificate</router-link>
+      </RippleButton>
     </div>
   </div>
 </template>

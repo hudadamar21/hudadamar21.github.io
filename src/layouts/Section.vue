@@ -52,7 +52,7 @@
         data-aos="zoom-in-left"
         data-aos-duration="500"
       >
-        <div class=" w-[70%] md:w-3/5 h-[75%] shadow-2xl bg-gray-800 rounded-xl overflow-hidden">
+        <div class="w-[70%] md:w-3/5 h-[75%] shadow-2xl bg-gray-800 rounded-xl overflow-hidden">
           <img
             :src="image"
             alt="image"

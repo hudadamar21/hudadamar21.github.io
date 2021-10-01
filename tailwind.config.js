@@ -1,3 +1,5 @@
+
+
 module.exports = {
   mode: 'jit',
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
@@ -27,5 +29,8 @@ module.exports = {
       filter: ['hover','focus']
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('./tailwind_plugin/column')
+  ],
 }
