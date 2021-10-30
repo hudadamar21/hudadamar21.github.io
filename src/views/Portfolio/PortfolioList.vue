@@ -2,7 +2,7 @@
   <transition name="switch" mode="out-in">
     <div v-if="filteredPortfilios.length">
       <transition-group 
-        tag="ul" name="list" appear class="w-full relative">
+        tag="ul" name="list" appear class="w-full relative space-y-10">
         <PortfolioCard 
           v-for="portfolio of filteredPortfilios" 
           :key="portfolio.title"
@@ -26,7 +26,7 @@ export default {
   components: { PortfolioCard },
   setup(){
     const portfolios = reactive(portfolioData)
-    const filteredPortfilios = ref(portfolios)
+    const filteredPortfilios = ref(portfolios.reverse())
     const category = computed(() => state.category)
     const tag = computed(() => state.tag)
 
@@ -44,6 +44,8 @@ export default {
       window.scrollTo({ top: 0 })
       filteredPortfilios.value = filteredByTag()
     })
+
+    console.log(filteredPortfilios);
 
     return {
       filteredPortfilios,

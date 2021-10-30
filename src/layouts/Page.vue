@@ -1,9 +1,9 @@
 <template>
   <section class="min-h-screen relative bg-gradient-to-t from-gray-900 to-black text-white">
     <div class="flex items-center justify-start py-5 w-full">
-      <a href="/" class="block md:fixed top-3 left-3 mx-5 md:mx-2 justify-self-start bg-gray-700 hover:bg-gray-600 rounded-full p-1 z-50">
+      <router-link to="/" class="block md:fixed top-3 left-3 mx-5 md:mx-2 justify-self-start bg-gray-700 hover:bg-gray-600 rounded-full p-1 z-50">
         <back class="w-8 h-8"/>
-      </a>
+      </router-link>
       <h1 class="block md:hidden tracking-widest font-bold text-3xl text-gray-100">
         {{ title }}
       </h1>

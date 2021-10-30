@@ -28,7 +28,8 @@ export default {
       'Website',
       'Web Application',
       'Web Games',
-      'Slicing Design'
+      'Slicing Design',
+      'Other'
     ])
 
     return {

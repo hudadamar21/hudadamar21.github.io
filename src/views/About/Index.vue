@@ -9,7 +9,7 @@
             Saya adalah seorang yang teliti, suka belajar hal baru dan cepat memahami , dengan kelebihan ini saya mengasah kemampuan saya dalam bidang pemrogramman sebagai Frontend Web Developer.
           </p>
           <div class="flex items-center justify-center md:justify-start flex-wrap gap-3">
-            <RippleButton>Cerificates</RippleButton>
+            <RippleButton>Certificates</RippleButton>
             <router-link to="/portfolio">
               <RippleButton >Portfolios</RippleButton>
             </router-link>

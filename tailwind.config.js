@@ -30,7 +30,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio'),
-    require('./tailwind_plugin/column')
+    require('@tailwindcss/aspect-ratio')
   ],
 }

@@ -99,6 +99,15 @@ const Website = [
     demoUrl: 'https://hudadamar21.github.io/landing-page-ezio',
     repoUrl: 'https://github.com/hudadamar21/landing-page-ezio'
   },
+  {
+    title: 'HartDev Website',
+    category: 'Website',
+    techs: ['Reactjs', 'Gatsbyjs', 'Tailwindcss', 'MDX'],
+    image: '',
+    desc: 'Website ini dibuat untuk menyimpan source code pada video pada channel youtube saya dengan nama yang sama HartDev, akan tetapi saya perluas lagi untuk memebuat tutorial dan blog.',
+    demoUrl: 'https://www.hartdev.site',
+    repoUrl: 'https://github.com/hudadamar21/hartdev'
+  }
 ]
 
 const WebGames = [
@@ -159,13 +168,54 @@ const SlicingDesign = [
     demoUrl: 'https://tweet-blog21.netlify.app',
     repoUrl: 'https://github.com/hudadamar21/tweet-blog'
   },
+  {
+    title: 'Shopperly',
+    category: 'Slicing Design',
+    techs: ['Vue', 'Tailwindcss', 'Swiperjs'],
+    image: '',
+    desc: 'Slicing website ecommerce, Desgin by Levianth',
+    demoUrl: 'https://shopperly.netlify.app',
+    repoUrl: 'https://github.com/hudadamar21/shopperly'
+  },
+  {
+    title: 'Arknights',
+    category: 'Slicing Design',
+    techs: ['Vue', 'Tailwindcss'],
+    image: '',
+    desc: 'Slicing website Arknights Unofficial, Design by Andre Rio',
+    demoUrl: 'https://arknights21.netlify.app',
+    repoUrl: 'https://github.com/hudadamar21/arknight'
+  },
+  {
+    title: 'Epic Games Store Clone',
+    category: 'Slicing Design',
+    techs: ['Vuejs', 'Tailwindcss', 'Swiperjs'],
+    image: '',
+    desc: 'Slicing website Epic Game Store Unofficial, Design by Epic Games',
+    demoUrl: 'https://epicgames-hd21.netlify.app',
+    repoUrl: 'https://github.com/hudadamar21/epicgames-clone'
+  }
+]
+
+
+export const Other = [
+  {
+    title: 'Convert Image To ASCII Art',
+    category: 'Other',
+    techs: ['python', 'pil', 'tkinter'],
+    image: '',
+    desc: 'Aplikasi berbasis python, yang digunakan untuk mengconvert image ke ASCII Art',
+    demoUrl: null,
+    repoUrl: 'https://github.com/hudadamar21/convert-image-to-ascii-art'
+  }
 ]
 
 
 export default [
+  ...Other,
   ...WebApplication,
   ...Website,
   ...WebGames,
-  ...SlicingDesign
+  ...SlicingDesign,
 ]
 

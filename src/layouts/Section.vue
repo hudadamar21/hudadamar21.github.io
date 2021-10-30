@@ -14,23 +14,15 @@
     />
 
     <div class="flex items-center h-screen px-5 md:px-20">
-      <div class="w-[75%] z-10" data-aos="fade-right" data-aos-duration="500">
+      <div class="w-[75%] z-10">
 
         <!-- Title -->
-        <h1
-          class=" block text-5xl md:text-[7rem] leading-none tracking-wider uppercase font-bold text-shadow"
-          data-aos="fade-right"
-          data-aos-delay="100"
-        >
+        <h1 class=" block text-5xl md:text-8xl leading-none tracking-wider uppercase font-bold text-shadow">
           {{ title }}
         </h1>
 
         <!-- Description -->
-        <div
-          class="description shadow-solid"
-          data-aos="fade-right"
-          data-aos-delay="200"
-        >
+        <div class="description shadow-solid">
           <slot name="desc"></slot>
         </div>
 
@@ -38,8 +30,6 @@
           class="mt-5"
           size="lg"
           @click="$emit('showmore')"
-          data-aos="fade-right"
-          data-aos-delay="300"
         >
           Show more
         </RippleButton>
@@ -47,12 +37,8 @@
       </div>
 
       <!-- image -->
-      <div
-        class=" absolute top-0 right-5 md:right-20 grid items-center justify-items-end w-full h-full"
-        data-aos="zoom-in-left"
-        data-aos-duration="500"
-      >
-        <div class="w-[70%] md:w-3/5 h-[75%] shadow-2xl bg-gray-800 rounded-xl overflow-hidden">
+      <div class="absolute top-0 right-5 md:right-20 grid items-center justify-items-end w-full h-full">
+        <div class="w-2/3 h-2/3 shadow-2xl bg-gray-800 rounded-xl overflow-hidden">
           <img
             :src="image"
             alt="image"

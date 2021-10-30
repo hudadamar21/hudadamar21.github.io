@@ -1,6 +1,6 @@
 <template>
-  <li class="w-full pb-5">
-    <div class="bg-gradient-to-br from-gray-700 to-gray-800 mx-3 rounded" data-aos="fade-up">
+  <li>
+    <div class="bg-gradient-to-br from-gray-700 to-gray-800 mx-3 rounded">
       <!-- title and tags -->
       <div class="p-4">
         <h1 class="text-3xl md:text-4xl border-gray-600 font-semibold tracking-wider mb-2">
@@ -10,7 +10,7 @@
       </div>
 
       <!-- image -->
-      <div class="w-full bg-gray-500 overflow-hidden">
+      <div v-if="portfolio.image" class="w-full bg-gray-500 overflow-hidden">
         <img 
           :src="portfolio.image" 
           class="object-cover w-full object-center" 
@@ -35,12 +35,12 @@
           {{ portfolio.desc }}
         </p>
         <div class="flex items-center justify-end pt-2 gap-3">
-            <a :href="portfolio.repoUrl" target="_blank" rel="norefferer"> 
+            <a v-if="portfolio.repoUrl" :href="portfolio.repoUrl" target="_blank" rel="norefferer"> 
               <RippleButton class="bg-green-700 hover:bg-green-800" backlight='none'>
                 Github
               </RippleButton>
             </a>
-            <a :href="portfolio.demoUrl" target="_blank" rel="norefferer"> 
+            <a v-if="portfolio.demoUrl" :href="portfolio.demoUrl" target="_blank" rel="norefferer"> 
               <RippleButton class="bg-blue-700 hover:bg-blue-800" backlight='none'>
                 Demo
               </RippleButton>
